@@ -20,26 +20,34 @@ if(len(sys.argv) > 4):
 	for i in range(0, len(variables_names)):
 		output.write('@ATTRIBUTE ' + str(variables_names[i]) + ' ' + str(variables_types[i]) + '\n')
 
+	#for i in range(0, len(variables_names)):
+	#	if(variables_types[i] == 'numeric'):
+	#		raw_data[variables_names[i]] = (raw_data[variables_names[i]] - raw_data[variables_names[i]].mean())/raw_data[variables_names[i]].std(ddof=0)
+
 	output.write('\n@DATA\n')
 	for index, row in raw_data.iterrows():
 		line = ''
+		number_of_nan = 0
 		for i in range(0, len(variables_names)):
 			if(str(row[variables_names[i]]) != 'nan'):
 				if(variables_types[i] == 'string'):
 					line += '\"' + str(row[variables_names[i]]) + '\"'					
 				else:
-					line += str(row[variables_names[i]])
+					if(row[variables_names[i]] == 0):
+						line += '0'
+					else:
+						line += '1'
+					#line += str(row[variables_names[i]])
 			else:
+				number_of_nan += 1
 				if(variables_types[i] == 'string'):
 					line += '\"nan\"'
 				else:
 					line += '0'
 			#	break
-
 			if(i < len(variables_names) - 1):
 				line += ','
-
-		if(line != ''):	
+		if(line != '' and number_of_nan < 0.5 * len(variables_names)):	
 			output.write(line + '\n')
 
 
