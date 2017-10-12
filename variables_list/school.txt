@@ -1,4 +1,3 @@
-HCM2 numeric
 MAIN numeric 
 NUMBRANCH numeric
 PREDDEG numeric 
@@ -9,15 +8,6 @@ LOCALE numeric
 CCBASIC numeric
 CCUGPROF numeric
 CCSIZSET numeric
-HBCU numeric
-PBI numeric
-ANNHI numeric
-TRIBAL numeric
-AANAPII numeric
-HSI numeric
-NANTI numeric
-MENONLY numeric
-WOMENONLY numeric
 DISTANCEONLY numeric
 CURROPER numeric
 TUITFTE numeric

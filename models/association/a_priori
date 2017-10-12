@@ -1,0 +1,74 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     academic
+Instances:    6854
+Attributes:   37
+              PCIP01
+              PCIP03
+              PCIP04
+              PCIP05
+              PCIP09
+              PCIP10
+              PCIP11
+              PCIP12
+              PCIP13
+              PCIP14
+              PCIP15
+              PCIP16
+              PCIP19
+              PCIP22
+              PCIP23
+              PCIP24
+              PCIP25
+              PCIP26
+              PCIP27
+              PCIP30
+              PCIP31
+              PCIP38
+              PCIP39
+              PCIP40
+              PCIP41
+              PCIP42
+              PCIP43
+              PCIP44
+              PCIP45
+              PCIP46
+              PCIP47
+              PCIP48
+              PCIP49
+              PCIP50
+              PCIP51
+              PCIP52
+              PCIP54
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.9 (6169 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 2
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 8
+
+Size of set of large itemsets L(2): 11
+
+Size of set of large itemsets L(3): 3
+
+Best rules found:
+
+ 1. PCIP10=0 6224 ==> PCIP25=0 6201    conf:(1)
+ 2. PCIP01=0 6217 ==> PCIP25=0 6188    conf:(1)
+ 3. PCIP04=0 PCIP41=0 6396 ==> PCIP25=0 6363    conf:(0.99)
+ 4. PCIP41=0 PCIP49=0 6288 ==> PCIP25=0 6253    conf:(0.99)
+ 5. PCIP49=0 6432 ==> PCIP25=0 6394    conf:(0.99)
+ 6. PCIP04=0 6566 ==> PCIP25=0 6526    conf:(0.99)
+ 7. PCIP41=0 6664 ==> PCIP25=0 6622    conf:(0.99)
+ 8. PCIP05=0 6265 ==> PCIP25=0 6225    conf:(0.99)
+ 9. PCIP39=0 PCIP41=0 6223 ==> PCIP25=0 6181    conf:(0.99)
+10. PCIP39=0 6407 ==> PCIP25=0 6358    conf:(0.99)
+

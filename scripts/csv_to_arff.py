@@ -33,11 +33,11 @@ if(len(sys.argv) > 4):
 				if(variables_types[i] == 'string'):
 					line += '\"' + str(row[variables_names[i]]) + '\"'					
 				else:
-					if(row[variables_names[i]] == 0):
-						line += '0'
-					else:
-						line += '1'
-					#line += str(row[variables_names[i]])
+					#if(row[variables_names[i]] == 0):
+					#	line += '0'
+					#else:
+					#	line += '1'
+					line += str(row[variables_names[i]])
 			else:
 				number_of_nan += 1
 				if(variables_types[i] == 'string'):
